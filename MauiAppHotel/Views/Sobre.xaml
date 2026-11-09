@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             BackgroundColor="#E6F6FA">
+
+    <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="Center">
+
+        <Image Source="dotnet_bot.png"
+               HeightRequest="150"
+               Aspect="AspectFit" />
+
+        <Label Text="Sobre o Hotel Vitor"
+               FontFamily="Kalam"
+               FontSize="40"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource Primary}" />
+
+        <Frame Padding="15" CornerRadius="20" BackgroundColor="White" BorderColor="Transparent">
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Aplicativo: App Hotel" TextColor="Black" />
+                <Label Text="Desenvolvedor: Vitor" TextColor="Black" />
+                <Label Text="Ano de desenvolvimento: 2026" TextColor="Black" />
+                <Label Text="Curso: Técnico em Desenvolvimento de Sistemas" TextColor="Black" />
+                <Label Text="Componente: Programação Mobile I" TextColor="Black" />
+                <Label Text="Tecnologia: .NET MAUI (.NET 8)" TextColor="Black" />
+            </VerticalStackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+
+</ContentPage>

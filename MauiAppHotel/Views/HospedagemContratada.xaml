@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.HospedagemContratada"
+             Title="Hospedagem Contratada"
+             BackgroundColor="#E6F6FA">
+
+    <VerticalStackLayout Padding="10" Spacing="10">
+
+        <Label Text="Resumo da Hospedagem"
+               FontFamily="Kalam"
+               FontSize="40"
+               TextColor="{StaticResource Primary}" />
+
+        <Frame Padding="15" CornerRadius="20" BackgroundColor="White" BorderColor="Transparent">
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                  ColumnDefinitions="*,*"
+                  RowSpacing="8">
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Suíte:" />
+                <Label Grid.Row="0" Grid.Column="1" TextColor="{StaticResource Primary}"
+                       Text="{Binding QuartoSelecionado.Descricao}" />
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Adultos:" TextColor="Black" />
+                <Label Grid.Row="1" Grid.Column="1" TextColor="{StaticResource Primary}"
+                       Text="{Binding QtdAdultos}" />
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Crianças:" TextColor="Black" />
+                <Label Grid.Row="2" Grid.Column="1" TextColor="{StaticResource Primary}"
+                       Text="{Binding QtdCriancas}" />
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Check-in:" TextColor="Black" />
+                <Label Grid.Row="3" Grid.Column="1" TextColor="{StaticResource Primary}"
+                       Text="{Binding DataCheckIn, StringFormat='{0:dd/MM/yyyy}'}" />
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Check-out:" TextColor="Black" />
+                <Label Grid.Row="4" Grid.Column="1" TextColor="{StaticResource Primary}"
+                       Text="{Binding DataCheckOut, StringFormat='{0:dd/MM/yyyy}'}" />
+
+                <Label Grid.Row="5" Grid.Column="0" Text="Estadia (dias):" TextColor="Black" />
+                <Label Grid.Row="5" Grid.Column="1" TextColor="{StaticResource Primary}"
+                       Text="{Binding Estadia}" />
+
+                <Label Grid.Row="6" Grid.Column="0" Text="Valor total:" FontAttributes="Bold" TextColor="Black" />
+                <Label Grid.Row="6" Grid.Column="1" TextColor="{StaticResource Primary}"
+                       FontAttributes="Bold"
+                       Text="{Binding ValorTotal, StringFormat='{0:C}'}" />
+            </Grid>
+        </Frame>
+    </VerticalStackLayout>
+
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿namespace MauiAppHotel
+{
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
+
+            UserAppTheme = AppTheme.Light;
+
+            MainPage = new NavigationPage(new Views.ContratacaoHospedagem());
+        }
+
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            var window = base.CreateWindow(activationState);
+
+            window.Width = 450;
+            window.Height = 820;
+
+            return window;
+        }
+    }
+}
